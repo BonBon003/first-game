@@ -44,14 +44,18 @@ public class Game extends Canvas implements Runnable{
 		handler = new Handler();
 		cam = new Camera(0, 0);		
 		File f = new File("levels.png");
-		/*try {
+		try {
 		    System.out.println(f.getCanonicalPath());
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
-		*/
-		level = loader.loadImage("/C:/Users/Andrew%20Le/eclipse-workspace/FirstGame/res/levels.png"); // loading the level
 		
+		/////////////////////////////////////// BIG PROBLEM
+		//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		level = loader.loadImage("/levels.png"); // loading the level
+		
+		// Not finding a file or something because I get a null pointer exception. Maybe it can't find the file in my res for some reason. 
+		/////////////////////////////////////////////////////////////////////////////////////////////////////////
 		
 		handler.addObject(new Player(WIDTH/2 -32, HEIGHT/2 - 32 , ID.Player, handler));
 		handler.addObject(new BasicEnemy(WIDTH/2, HEIGHT/2, ID.BasicEnemy));
