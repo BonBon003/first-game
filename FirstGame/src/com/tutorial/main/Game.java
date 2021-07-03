@@ -43,7 +43,7 @@ public class Game extends Canvas implements Runnable{
 		BufferedImageLoader loader = new BufferedImageLoader();
 		handler = new Handler();
 		cam = new Camera(0, 0);		
-		File f = new File("levels.png");
+		File f = new File("level.png");
 		try {
 		    System.out.println(f.getCanonicalPath());
 		} catch (IOException e) {
@@ -52,7 +52,7 @@ public class Game extends Canvas implements Runnable{
 		
 		/////////////////////////////////////// BIG PROBLEM
 		//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-		level = loader.loadImage("/levels.png"); // loading the level
+		level = loader.loadImage("/level.png"); // loading the level
 		
 		// Not finding a file or something because I get a null pointer exception. Maybe it can't find the file in my res for some reason. 
 		/////////////////////////////////////////////////////////////////////////////////////////////////////////
